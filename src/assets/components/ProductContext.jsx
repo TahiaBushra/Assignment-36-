@@ -61,10 +61,13 @@ const productReducer = (state, action) => {
       };
   }
 };
+
 export const StoreProvider = ({ children }) => {
   const [state, dispatch] = useReducer(productReducer, initialState);
-  return;
-  <ProductContext.Provider value={[state, dispatch]}>
-    {children}
-  </ProductContext.Provider>;
+
+  return (
+    <ProductContext.Provider value={[state, dispatch]}>
+      {children}
+    </ProductContext.Provider>
+  );
 };

@@ -1,13 +1,17 @@
 import Counter from "./assets/components/Counter";
+import Memo from "./assets/components/Memo";
 import { StoreProvider } from "./assets/components/ProductContext";
 import ProductList from "./assets/components/ProductList";
 
 const App = () => {
   return (
-    <StoreProvider>
-      <Counter />
-      <ProductList />
-    </StoreProvider>
+    <>
+      <StoreProvider>
+        <ProductList />
+        <Counter />
+      </StoreProvider>
+      <Memo />
+    </>
   );
 };
 
